@@ -135,19 +135,6 @@ bert_sense_knowledge/
 └── README.md            # Project documentation
 ```
 
-##  Methodology
-
-1.  **Data Source**: We use **SemCor**, a subset of the Brown Corpus annotated with WordNet sense tags.
-2.  **Embedding Generation**: 
-    *   Sentences containing target words are passed through `bert-base-uncased`.
-    *   Embeddings are derived by summing the last 4 layers.
-    *   Subword tokens corresponding to the target word are averaged to produce a single vector.
-3.  **Analysis**:
-    *   **Centroids**: The mean vector for all instances of a specific sense `s` is computed: $C_s = \frac{1}{|s|} \sum_{v \in s} v$.
-    *   **Distance**: We calculate $1 - \cos(C_{s1}, C_{s2})$.
-    *   **Classification**: A Logistic Regression classifier (L1 penalty) predicts word senses. We compare its weighted F1 score against random and majority baselines.
-    *   **Confusion Relatedness**: We derive semantic relatedness from the classifier's confusion matrix: $R(s1, s2) = \frac{P(s2|s1) + P(s1|s2)}{2}$.
-
 ##  References
 
 *   **Original Paper**: Nair, S., Srinivasan, M., & Meylan, S. (2020). *Contextualized Word Embeddings Encode Aspects of Human-Like Word Sense Knowledge*. arXiv:2010.13057.
