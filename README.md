@@ -10,7 +10,7 @@
 
 ---
 
-## 📌 Abstract
+##  Abstract
 
 This project reproduces the core computational experiments from the paper *Contextualized Word Embeddings Encode Aspects of Human-Like Word Sense Knowledge* (Nair et al., 2020). 
 
@@ -20,7 +20,7 @@ By extracting contextualized embeddings from the **SemCor** corpus and analyzing
 
 > **Note**: This reproduction focuses on the *computational modeling* components of the paper (Section 3.4 onwards). The human behavioral experiments (Section 3.2) are not included as they rely on proprietary participant data.
 
-## 🚀 Key Features
+##  Key Features
 
 *   **Dynamic Data Loading**: Automated scanning of the NLTK **SemCor** corpus to find and align specific lemma occurrences.
 *   **Advanced Embedding Extraction**: Implementation of the paper's specific embedding strategy:
@@ -40,7 +40,7 @@ By extracting contextualized embeddings from the **SemCor** corpus and analyzing
 
 ---
 
-## 📜 Methodology
+##  Methodology
 
 1.  **Data Source**: We use **SemCor**, a subset of the Brown Corpus annotated with WordNet sense tags.
 2.  **Embedding Generation**: 
@@ -55,7 +55,7 @@ By extracting contextualized embeddings from the **SemCor** corpus and analyzing
 
 ---
 
-## 📊 Results & Visualization
+##  Results & Visualization
 
 The pipeline processes target words to reveal their semantic structure. Below are examples of the generated visualizations.
 
@@ -86,7 +86,7 @@ The pipeline processes target words to reveal their semantic structure. Below ar
 
 ---
 
-## 🛠️ Installation
+##  Installation
 
 1.  **Clone the repository:**
     ```bash
@@ -106,7 +106,7 @@ The pipeline processes target words to reveal their semantic structure. Below ar
     python setup.py
     ```
 
-## 💻 Usage
+##  Usage
 
 Run the main analysis pipeline to reproduce the results and generate plots:
 
@@ -120,7 +120,7 @@ This script will:
 3.  Compute metrics (Entropy, Distances, Classification Scores).
 4.  Generate and save `.png` visualizations in the project root.
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 bert_sense_knowledge/
@@ -135,7 +135,7 @@ bert_sense_knowledge/
 └── README.md            # Project documentation
 ```
 
-## 📜 Methodology
+##  Methodology
 
 1.  **Data Source**: We use **SemCor**, a subset of the Brown Corpus annotated with WordNet sense tags.
 2.  **Embedding Generation**: 
@@ -148,7 +148,7 @@ bert_sense_knowledge/
     *   **Classification**: A Logistic Regression classifier (L1 penalty) predicts word senses. We compare its weighted F1 score against random and majority baselines.
     *   **Confusion Relatedness**: We derive semantic relatedness from the classifier's confusion matrix: $R(s1, s2) = \frac{P(s2|s1) + P(s1|s2)}{2}$.
 
-## 📚 References
+##  References
 
 *   **Original Paper**: Nair, S., Srinivasan, M., & Meylan, S. (2020). *Contextualized Word Embeddings Encode Aspects of Human-Like Word Sense Knowledge*. arXiv:2010.13057.
 *   **BERT**: Devlin, J., Chang, M. W., Lee, K., & Toutanova, K. (2018). *BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding*.
